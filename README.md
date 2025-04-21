@@ -1,6 +1,6 @@
 # 👨‍💻 JGMDataScience - Portfolio Personal
 
-[![Portada de JGMDataScience](static/images/cover1.png)](https://jgmdatascience.com)
+[![Portada de JGMDataScience](/src/static/images/cover1.png)](https://jgmdatascience.com)
 
 
 ¡Bienvenido a mi portfolio de ciencia de datos!  
