@@ -3,7 +3,7 @@
 [![Portada de JGMDataScience](/src/static/images/cover1.png)](https://jgmdatascience.com)
 
 
-¡Bienvenido a mi portfolio de ciencia de datos!  
+¡Bienvenido a mi portfolio personal!  
 Soy **Juan Gonzalez**, estudiante de Ingeniería Mecánica y apasionado por la programación desde hace más de 3 años. Me dedico a diseñar **soluciones de automatización** para empresas a través del **tratamiento de datos**, **Machine Learning** y **desarrollo web**.
 
 ---
@@ -11,7 +11,7 @@ Soy **Juan Gonzalez**, estudiante de Ingeniería Mecánica y apasionado por la p
 ## 🚀 ¿Qué encontrarás aquí?
 
 - Herramientas diseñadas para **ahorrar tiempo y costes** en empresas.
-- Soluciones web interactivas que combinan backend con análisis avanzado.
+- Soluciones web interactivas para resolver problemas.
 - Automatizaciones basadas en Python para tareas repetitivas y análisis de datos.
 
 ---
@@ -20,7 +20,7 @@ Soy **Juan Gonzalez**, estudiante de Ingeniería Mecánica y apasionado por la p
 
 - **Lenguajes**: Python, SQL
 - **Librerías**: Pandas, Numpy, Scikit-Learn, TensorFlow, NLTK
-- **Frameworks**: Flask, LangChain
+- **Frameworks**: Flask
 - **DevOps / Otros**: Git, AWS, DagsHub
 
 ---
