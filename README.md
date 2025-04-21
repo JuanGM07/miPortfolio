@@ -27,16 +27,16 @@ Soy **Juan Gonzalez**, estudiante de Ingeniería Mecánica y apasionado por la p
 
 ## 📂 Proyectos destacados
 
-### 🧾 [FacturDash](https://jgmdatascience.com/proyectos/facturdash)
+### 🧾 [FacturDash](https://github.com/JuanGM07/FacturDash)
 Dashboard interactivo que **extrae información clave de facturas normalizadas** usando GPT. Automatiza el seguimiento de métricas financieras.
 
-### 🗄️ [Data Base Query](https://jgmdatascience.com/proyectos/databasequery)
+### 🗄️ [Data Base Query](https://github.com/JuanGM07/DataBaseQuery)
 Modelo **NL2SQL** que transforma lenguaje natural en consultas SQL. Perfecto para empleados que no dominan bases de datos.
 
-### 🤖 [Business Chat Bot](https://jgmdatascience.com/proyectos/chatbot)
+### 🤖 [Business Chat Bot](https://github.com/JuanGM07/businessChatBot)
 Chatbot empresarial que ofrece **respuestas automáticas** con ayuda de OpenAI. Ideal para soporte 24/7.
 
-### 📊 [Sentiment Analysis System](https://jgmdatascience.com/proyectos/sentimentanalysis)
+### 📊 [Sentiment Analysis System](https://github.com/JuanGM07/sentimentAnalysisSystem)
 Scrapea reseñas de múltiples sitios y genera una **nube de palabras** con lo mejor y peor valorado de tu negocio.
 
 ---
