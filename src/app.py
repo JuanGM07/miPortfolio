@@ -2,6 +2,13 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+# Configuraciones de seguridad para producción
+app.config.update(
+    TEMPLATES_AUTO_RELOAD=True,
+    SESSION_COOKIE_SECURE=True,
+    SESSION_COOKIE_HTTPONLY=True,
+    SESSION_COOKIE_SAMESITE='Lax',
+)
 
 @app.route('/')
 def index():
@@ -35,5 +42,9 @@ def sobremi():
 def pagina_no_encontrada(e):
     return render_template('404.html'), 404
 
-if __name__ == '__main__':
-    app.run(debug=False)
+# Necesario para Vercel
+def vercel_handler(request):
+    with app.app_context():
+        response = app.full_dispatch_request()
+    return response
+
