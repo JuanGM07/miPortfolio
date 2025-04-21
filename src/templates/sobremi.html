@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="min-h-screen pt-32 px-4 md:px-20 lg:px-48 text-white relative z-10">
+
+  <!-- Encabezado -->
+  <h1 class="text-4xl md:text-5xl font-bold mb-6 border-b-4 border-blue-500 inline-block pb-2">
+    Sobre mí
+  </h1>
+
+  <!-- Perfil -->
+  <div class="flex flex-col md:flex-row items-center gap-8 my-12">
+    <img src="{{ url_for('static', filename='images/perfil.png') }}"
+         alt="Foto de perfil"
+         class="rounded-full w-48 h-48 object-cover border-4 border-blue-600 shadow-lg hover:scale-105 transition duration-300">
+    <p class="text-lg leading-relaxed md:w-2/3 text-gray-200">
+      ¡Hola! Soy <strong>Juan González</strong>, un apasionado de la tecnología, estudiante de Ingeniería Mecánica y desarrollador autodidacta. Cuando no programo, me preparo las últimas asignaturas de la carrera para terminar pronto, voy al gimnasio,
+      juego al fútbol, salgo a tomar algo con mis amigos, toco el saxofón, salgo a cenar con mi novia, o leo un rato con un café caliente. Sí, no paro, pero es algo que me encanta.
+    </p>
+  </div>
+
+  <!-- Proyecto especial -->
+  <div class="bg-blue-900 bg-opacity-40 p-6 rounded-xl shadow-xl mb-12">
+    <h2 class="text-2xl font-semibold text-blue-300 mb-4">📚 Un agradecimiento especial</h2>
+    <p class="text-gray-300 mb-4">
+      Soy un gran lector de <strong>Robert Greene</strong>. Sus libros han tenido un gran impacto en mi vida, tanto personal como profesional. Por eso decidí crearle una página web como muestra de agradecimiento:
+    </p>
+    <a href="https://robert-greene-page.vercel.app/" target="_blank" class="text-blue-400 underline hover:text-blue-200 transition">
+      Visita la web que creé para Robert Greene →
+    </a>
+  </div>
+
+  <!-- Hobbies llamativos -->
+  <h2 class="text-3xl font-bold mb-6 text-blue-400">🎨 Más que código...</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+    <!-- Tarjeta 1 -->
+    <div class="bg-blue-800 bg-opacity-40 rounded-xl p-6 shadow-lg hover:scale-105 transition duration-300">
+      <div class="text-4xl mb-3">⚽</div>
+      <h3 class="text-xl font-semibold text-white mb-2">Fútbol</h3>
+      <p class="text-gray-300">Juego al fútbol de forma competitiva (federado) desde los 10 años. Es mi válvula de escape, y algo que me ha hecho conocer a gente increíble, y a mejorar como persona, y obviamente como deportista..</p>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="bg-blue-800 bg-opacity-40 rounded-xl p-6 shadow-lg hover:scale-105 transition duration-300">
+      <div class="text-4xl mb-3">🎷</div>
+      <h3 class="text-xl font-semibold text-white mb-2">Saxofonista</h3>
+      <p class="text-gray-300">Toco el saxofón en una banda de música desde los 8 años (en esa época más que tocar era ruido). Me transmite y hago transmitir emociones que no consigue ninguna otra cosa.</p>
+    </div>
+
+    <!-- Tarjeta 3 -->
+    <div class="bg-blue-800 bg-opacity-40 rounded-xl p-6 shadow-lg hover:scale-105 transition duration-300">
+      <div class="text-4xl mb-3">📖</div>
+      <h3 class="text-xl font-semibold text-white mb-2">Lectura</h3>
+      <p class="text-gray-300">Devoro libros, especialmente de psicología, crecimiento personal y novelas policíacas.</p>
+    </div>
+
+    <!-- Tarjeta 4 -->
+    <div class="bg-blue-800 bg-opacity-40 rounded-xl p-6 shadow-lg hover:scale-105 transition duration-300">
+      <div class="text-4xl mb-3">🧠</div>
+      <h3 class="text-xl font-semibold text-white mb-2">Autodidacta</h3>
+      <p class="text-gray-300">Todo lo que sé de programación lo he aprendido por mi cuenta, también incluyendo las certificaciones. Y sigo aprendiendo cada día de todo y de todos.</p>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

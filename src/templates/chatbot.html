@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="min-h-screen pt-32 px-4 md:px-20 lg:px-48 text-white relative z-10">
+
+  <!-- Título del Proyecto -->
+  <h1 class="text-4xl md:text-5xl font-bold mb-6 border-b-4 border-blue-500 inline-block pb-2">
+    Business ChatBot
+  </h1>
+
+  <!-- Imagen destacada -->
+  <img src="{{ url_for('static', filename='images/chatbot1.png') }}"
+       alt="databasequery"
+       class="w-full max-w-4xl rounded-xl mx-auto shadow-lg my-10">
+
+  <!-- Descripción -->
+  <p class="text-lg leading-relaxed mb-8">
+    Este chatbot de negocio es fácil de integrar en tu web: solo necesitas agregar tus preguntas y respuestas en el archivo <code>/src/faqs.json</code>, luego generar los embeddings ejecutando el script <code>src/app.py</code>. 
+ </p>
+
+  <p class="text-lg leading-relaxed mb-8">
+    Con esta simple configuración, el chatbot podrá responder automáticamente a las consultas de los usuarios, usando la tecnología de OpenAI para respuestas más complejas cuando no se encuentra una coincidencia directa. 
+    Ideal para ofrecer soporte 24/7 sin complicaciones adicionales.  
+</p>
+
+
+
+  <section id="funcionamiento" class="max-w-5xl mx-auto px-4 py-20 text-white">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">¿Cómo funciona BusinessChatBot?</h2>
+  
+    <!-- Bloque 1 -->
+    <div class="flex flex-col md:flex-row items-center mb-16 gap-8">
+      <img src="{{ url_for('static', filename='images/chatbot2.png') }}" alt="Paso 1" class="w-full md:w-1/2 rounded-lg shadow-lg">
+      <div class="md:w-1/2">
+        <h3 class="text-xl font-semibold mb-4">1. Rellenar faqs.json</h3>
+        <p class="text-gray-300">
+            Comenzamos creando un archivo json de preguntas y respuestas particulares de nuestro negocio. Por mucho que utilicemos un modelo GPT de OpenAI 
+            no podrá saber que ofrecemos, y nuestras características particulares.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Bloque 2 -->
+    <div class="flex flex-col-reverse md:flex-row items-center mb-16 gap-8">
+      <div class="md:w-1/2">
+        <h3 class="text-xl font-semibold mb-4">2. Generar embeddings de las preguntas y similaridad</h3>
+        <p class="text-gray-300">
+            Después de esto, al ejecutar el archivo principal se generan los embeddings, y el archivo npy. Además a traves de Scikit-Learn calculamos la similaridad
+            de la pregunta del usuario con las que tenemos almacenadas en nuestro json, para ver si podemos responder directamente con eso, o hay que modificar algo.
+      </div>
+      <img src="{{ url_for('static', filename='images/chatbot3.png') }}" alt="Paso 2" class="w-full md:max-w-xs rounded-lg shadow-lg">
+    </div>
+  
+    <!-- Bloque 3 -->
+    <div class="flex flex-col md:flex-row items-center gap-8">
+      <img src="{{ url_for('static', filename='images/chatbot4.png') }}" alt="Paso 3" class="w-full md:max-w-xs rounded-lg shadow-lg">
+      <div class="md:w-1/2">
+        <h3 class="text-xl font-semibold mb-4">3. Inicio de conversación</h3>
+        <p class="text-gray-300">
+          Finalmente, podemos iniciar la conversación, sobre las preguntas que tenemos en faqs.json, y cualquier otra pregunta que le haríamos a un llm como el de OpenAI.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Características principales -->
+  <h2 class="text-2xl font-semibold mb-4 text-blue-400">Características clave:</h2>
+  <ul class="list-disc list-inside space-y-2 mb-8">
+    <li>Conversión de Lenguaje Natural a SQL (NL2SQL)</li>
+    <li>Base de Datos de Prueba Incorporad</li>
+    <li>Preparado para Escalabilidad</li>
+    <li>Interfaz Simple y Accesible</li>
+    <li>Diseño compacto y adaptado a pantallas 1080p</li>
+  </ul>
+
+  <!-- Tecnologías utilizadas -->
+  <h2 class="text-2xl font-semibold mb-4 text-blue-400">Tecnologías utilizadas:</h2>
+  <div class="flex flex-wrap gap-3 mb-10">
+    <span class="bg-blue-800 text-white px-3 py-1 rounded-full text-sm">Python</span>
+    <span class="bg-blue-800 text-white px-3 py-1 rounded-full text-sm">Flask</span>
+    <span class="bg-blue-800 text-white px-3 py-1 rounded-full text-sm">OpenAI GPT</span>
+    <span class="bg-blue-800 text-white px-3 py-1 rounded-full text-sm">Pandas</span>
+    <span class="bg-blue-800 text-white px-3 py-1 rounded-full text-sm">Scikit-Learn</span>
+    <span class="bg-blue-800 text-white px-3 py-1 rounded-full text-sm">Numpy</span>
+  </div>
+
+  <!-- Enlace al repositorio -->
+  <a href="https://github.com/JuanGM07/businessChatBot" target="_blank"
+     class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl shadow-lg transition-all duration-300">
+    Ver en GitHub
+  </a>
+
+</div>
+{% endblock %}

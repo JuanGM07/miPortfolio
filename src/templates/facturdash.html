@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="min-h-screen pt-32 px-4 md:px-20 lg:px-48 text-white relative z-10">
+
+  <!-- Título del Proyecto -->
+  <h1 class="text-4xl md:text-5xl font-bold mb-6 border-b-4 border-blue-500 inline-block pb-2">
+    FacturDash
+  </h1>
+
+  <!-- Imagen destacada -->
+  <img src="{{ url_for('static', filename='images/facturdash1.png') }}"
+       alt="Dashboard de FacturDash"
+       class="w-full max-w-4xl rounded-xl mx-auto shadow-lg my-10">
+
+  <!-- Descripción -->
+  <p class="text-lg leading-relaxed mb-8">
+    FacturDash es una herramienta diseñada para extraer información clave de facturas normalizadas. Como no tenía facturas reales para probar, desarrollé un script (<code>generate.py</code>) que genera facturas de forma automática con un formato estándar.
+  </p>
+
+  <p class="text-lg leading-relaxed mb-8">
+    Para transformar facturas reales no estructuradas en este formato, empleamos un modelo GPT de OpenAI, el cual se encarga de normalizarlas de manera automática.
+    A partir de ahí, ejecutando <code>app.py</code> se genera un dashboard interactivo con las métricas más relevantes, permitiendo un análisis eficiente y visual.
+  </p>
+
+
+
+  <section id="funcionamiento" class="max-w-5xl mx-auto px-4 py-20 text-white">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">¿Cómo funciona FacturDash?</h2>
+  
+    <!-- Bloque 1 -->
+    <div class="flex flex-col md:flex-row items-center mb-16 gap-8">
+      <img src="{{ url_for('static', filename='images/facturdash2.png') }}" alt="Paso 1" class="w-full md:w-1/2 rounded-lg shadow-lg">
+      <div class="md:w-1/2">
+        <h3 class="text-xl font-semibold mb-4">1. Formato del input de las facturas</h3>
+        <p class="text-gray-300">
+          Para comenzar, debemos asegurarnos que las facturas están normalizadas, es decir, a través de un proceso de NLP (Natural Language Processing)
+          filtramos estas caracteristicas que necesitamos de cada factura, del resto del texto, imagenes y caracteres. Solo fecha, proveedor, concepto e importe.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Bloque 2 -->
+    <div class="flex flex-col-reverse md:flex-row items-center mb-16 gap-8">
+      <div class="md:w-1/2">
+        <h3 class="text-xl font-semibold mb-4">2. Almacenamiento de la información</h3>
+        <p class="text-gray-300">
+          Posteriormente, almacenamos los datos obtenidos de las facturas normalizadas en un dataframe. Y de ahí sacamos las variables que necesitemos, 
+          el dashboard que vimos al inicio es de prueba, y podemos incluso crear nuevas métricas, no necesariamente un gráfico de barras de gasto mensual como este.
+        </p>
+      </div>
+      <img src="{{ url_for('static', filename='images/facturdash3.png') }}" alt="Paso 2" class="w-full md:w-1/2 rounded-lg shadow-lg">
+    </div>
+  
+    <!-- Bloque 3 -->
+    <div class="flex flex-col md:flex-row items-center gap-8">
+      <img src="{{ url_for('static', filename='images/facturdash1.png') }}" alt="Paso 3" class="w-full md:w-1/2 rounded-lg shadow-lg">
+      <div class="md:w-1/2">
+        <h3 class="text-xl font-semibold mb-4">3. Visualización del Dashboard</h3>
+        <p class="text-gray-300">
+          Finalmente, solo nos queda ejecutar el fichero principal, con las métricas, y la distribución de estas en el dashboard que queramos, y se nos genera una url donde poder 
+          visualizar el dashboard. En este codigo de ejemplo generé este.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Características principales -->
+  <h2 class="text-2xl font-semibold mb-4 text-blue-400">Características clave:</h2>
+  <ul class="list-disc list-inside space-y-2 mb-8">
+    <li>Extracción inteligente de datos clave desde PDFs</li>
+    <li>Generador automático de facturas normalizadas</li>
+    <li>Normalización de documentos con GPT de OpenAI</li>
+    <li>Dashboard interactivo con KPIs financieros</li>
+    <li>Diseño compacto y adaptado a pantallas 1080p</li>
+  </ul>
+
+  <!-- Tecnologías utilizadas -->
+  <h2 class="text-2xl font-semibold mb-4 text-blue-400">Tecnologías utilizadas:</h2>
+  <div class="flex flex-wrap gap-3 mb-10">
+    <span class="bg-blue-800 text-white px-3 py-1 rounded-full text-sm">Python</span>
+    <span class="bg-blue-800 text-white px-3 py-1 rounded-full text-sm">Flask</span>
+    <span class="bg-blue-800 text-white px-3 py-1 rounded-full text-sm">OpenAI GPT</span>
+    <span class="bg-blue-800 text-white px-3 py-1 rounded-full text-sm">Pandas</span>
+    <span class="bg-blue-800 text-white px-3 py-1 rounded-full text-sm">ChartJS</span>
+    <span class="bg-blue-800 text-white px-3 py-1 rounded-full text-sm">Fitz</span>
+  </div>
+
+  <!-- Enlace al repositorio -->
+  <a href="https://github.com/JuanGM07/FacturDash" target="_blank"
+     class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl shadow-lg transition-all duration-300">
+    Ver en GitHub
+  </a>
+
+</div>
+{% endblock %}

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JGMDataScience</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Incluir la librería particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+
+  <!-- Fondo animado -->
+  <div id="particles-js"></div>
+  <nav class="custom-navbar">
+    <div class="navbar-container">
+      <a href="/" class="navbar-logo">JGMDataScience</a>
+      <div class="navbar-links">
+        <a href="https://forms.gle/UGJ5ZG5CX6zcE9Tm7">Contacto</a>
+        <a href="/faqs">FAQs</a>
+        <a href="/sobremi">Sobre Mí</a>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <h1>
+        Hi - I'm <span class="highlight">Juan Gonzalez</span>
+        <span class="wave">👋</span>
+      </h1>
+
+      <div class="badges">
+        <span class="badge">ML ENGINEER</span>
+        <span class="badge">PYTHON DEVELOPER</span>
+        <span class="badge">DATA SCIENTIST</span>
+      </div>
+
+      <div class="social-links">
+        <a href="https://github.com/JuanGM07" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a> /
+        <a href="https://www.tiktok.com/@jgmdev" target="_blank">
+          <i class="fab fa-tiktok"></i> TikTok
+        </a> /
+        <a href="https://www.linkedin.com/in/jgmdatascience/" target="_blank">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About me -->
+  <section id="about" class="section about">
+    <div class="about-container">
+      <h2>Sobre mí</h2>
+      <p>
+        Soy <strong>Juan Gonzalez</strong>, tengo 22 años, estudio Ingeniería Mecánica pero mi pasión es la programación desde hace más de 3 años.
+        Me dedico a diseñar <span class="accent">soluciones de automatización</span> para empresas a través de la ciencia de datos y la creación de modelos de aprendizaje automático. 
+      </p>
+      <div class="logo-container">
+        <img src="/static/images/cover.png" alt="Logo de Juan Gonzalez" class="floating-logo">
+      </div>
+      <p>
+        Tengo proyectos con la mayoría de herramientas usadas a día de hoy para resolver problemas con Data Science. Me especializo en la <strong>recolección y tratado de datos</strong> pero puedo trabajar creando modelos, ajustándolos
+        en función de las necesidades, o llevando la solución final a una web o dashboard interactivo. Todo con el objetivo de <span class="accent">ahorrar costes o tiempo</span> a las empresas.
+      </p>
+  
+       <!-- Logo flotante aquí si lo has añadido antes -->
+
+  <div class="about-skills">
+    <h3>¿Con que trabajo para crear estas soluciones?</h3>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <img src="/static/icons/python1.webp" alt="Python">
+        <span>Python</span>
+      </div>
+      <div class="skill-card">
+        <img src="/static/icons/dagshub.webp" alt="DagsHub">
+        <span>DagsHub</span>
+      </div>
+      <div class="skill-card">
+        <img src="/static/icons/aws.webp" alt="AWS">
+        <span>AWS</span>
+      </div>
+      <div class="skill-card">
+        <img src="/static/icons/tensorflow.png" alt="TensorFlow">
+        <span>TensorFlow</span>
+      </div>
+      <div class="skill-card">
+        <img src="/static/icons/sql.png" alt="SQL">
+        <span>SQL</span>
+      </div>
+      <div class="skill-card">
+        <img src="/static/icons/git.png" alt="Git">
+        <span>Git</span>
+      </div>
+      <div class="skill-card">
+        <img src="/static/icons/numpy.png" alt="Numpy">
+        <span>Numpy</span>
+      </div>
+      <!-- Agrega más según tus habilidades -->
+    </div>
+  </div>
+  </section>
+  <section class="projects-section section" id="proyectos">
+    <div class="container">
+      <h2>Proyectos</h2>  
+  
+    <div class="projects-wrapper">
+  
+      <!-- Proyecto 1 -->
+      <div class="project-card">
+        <a href="/proyectos/facturdash" target="_blank">
+          <img class="project-image" src="/static/images/dashboard.png" alt="Proyecto 1">
+        </a>
+        <div class="project-content">
+          <h3>FacturDash</h3>
+          <p>FacturDash es una herramienta que extrae información clave de facturas normalizadas utilizando un modelo GPT de OpenAI.
+            Al ejecutar el fichero principal, se crea un dashboard interactivo con las métricas más relevantes.</p>
+          <div class="project-skills">
+            <div class="skill-card">
+              <img src="/static/icons/python1.webp" alt="Python">
+              <span>Python</span>
+            </div>
+            <div class="skill-card">
+              <img src="/static/icons/flask.svg" alt="Flask">
+              <span>Flask</span>
+            </div>
+            <div class="skill-card">
+              <img src="/static/icons/chart.webp" alt="ChartJS">
+              <span>ChartJS</span>
+            </div>
+            <div class="skill-card">
+              <img src="/static/icons/pandas.png" alt="Pandas">
+              <span>Pandas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Proyecto 2 -->
+      <div class="project-card">
+        <a href="/proyectos/databasequery" target="_blank">
+          <img class="project-image" src="/static/images/databasequery.png" alt="Proyecto 2">
+        </a>
+        <div class="project-content">
+          <h3>Data Base Query</h3>
+          <p>Esta herramienta es un modelo NL2SQL, la cual recibe lenguaje natural y lo transforma a SQL para comunicarse con una base de datos.
+            Ideal para que empleados que no conozcan de este lenguaje puedan hacer consultas a las bases de datos de la empresa.
+          </p>
+          <div class="project-skills">
+            <div class="skill-card">
+              <img src="/static/icons/python1.webp" alt="Python">
+              <span>Python</span>
+            </div>
+            <div class="skill-card">
+              <img src="/static/icons/langchain.png" alt="Langchain">
+              <span>Langchain</span>
+            </div>
+            <div class="skill-card">
+              <img src="/static/icons/pandas.png" alt="Pandas">
+              <span>Pandas</span>
+            </div>
+            <div class="skill-card">
+              <img src="/static/icons/flask.svg" alt="Flask">
+              <span>Flask</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proyecto 3 -->
+      <div class="project-card">
+        <a href="/proyectos/chatbot" target="_blank">
+          <img class="project-image" src="/static/images/chatbot.png" alt="Proyecto 2">
+        </a>
+        <div class="project-content">
+          <h3>Business Chat Bot</h3>
+          <p>Este chatbot puede responder automáticamente a las consultas de los usuarios, usando la tecnología de OpenAI para respuestas más complejas cuando no se encuentra una coincidencia directa con las preguntas concretas del negocio.
+             Ideal para ofrecer soporte 24/7 sin complicaciones adicionales.
+          </p>
+          <div class="project-skills">
+            <div class="skill-card">
+              <img src="/static/icons/python1.webp" alt="Python">
+              <span>Python</span>
+            </div>
+            <div class="skill-card">
+              <img src="/static/icons/scikit.png" alt="Scikit-Learn">
+              <span>Scikit-Learn</span>
+            </div>
+            <div class="skill-card">
+              <img src="/static/icons/numpy.png" alt="Numpy">
+              <span>Numpy</span>
+            </div>
+            <div class="skill-card">
+              <img src="/static/icons/flask.svg" alt="Flask">
+              <span>Flask</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proyecto 4 -->
+      <div class="project-card">
+        <a href="/proyectos/sentimentanalysis" target="_blank">
+          <img class="project-image" src="/static/images/sentiment.png" alt="Proyecto 2">
+        </a>
+        <div class="project-content">
+          <h3>Sentiment Analysis System</h3>
+          <p>Solo hace falta introducir el nombre del negocio y scrapea información tanto de google places como de muchos otras webs de reseñas, foros y demás. 
+            Con eso saca una nube de palabras de lo que la opinión publica considera mejor y peor del negocio.
+          </p>
+          <div class="project-skills">
+            <div class="skill-card">
+              <img src="/static/icons/python1.webp" alt="Python">
+              <span>Python</span>
+            </div>
+            <div class="skill-card">
+              <img src="/static/icons/nltk.png" alt="NLTK">
+              <span>NLTK</span>
+            </div>
+            <div class="skill-card">
+              <img src="/static/icons/bs4d.png" alt="Beautiful Soup">
+              <span>Beautiful Soup</span>
+            </div>
+            <div class="skill-card">
+              <img src="/static/icons/flask.svg" alt="Flask">
+              <span>Flask</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+    </div> <!-- cierre de .container -->
+
+  </section>
+
+  <section id="servicios" class="servicios-section">
+    <h2>¿Qué servicios ofrezco?</h2>
+    <div class="servicios-grid">
+      <div class="servicio-card">
+        <img src="/static/icons/automation.png" alt="Automatización" />
+        <h3>Automatización de tareas repetitivas</h3>
+        <p>Desarrollo herramientas que reducen el trabajo manual, optimizando procesos internos, y haciéndolos más eficientes.</p>
+      </div>
+      <div class="servicio-card">
+        <img src="/static/icons/algorithm.png" alt="Limpieza de datos" />
+        <h3>Tratado y limpieza de datos</h3>
+        <p>Transformo datos desordenados en información lista para análisis, visualización o creación de modelos de aprendizaje automático.</p>
+      </div>
+      <div class="servicio-card">
+        <img src="/static/icons/decision-making.png" alt="Modelos" />
+        <h3>Modelos para mejora de rendimiento</h3>
+        <p>Implemento modelos predictivos que ayudan a mejorar métricas principales, ya sea para ingresar más, o gastar menos.</p>
+      </div>
+      <div class="servicio-card">
+        <img src="/static/icons/dashboard.png" alt="Dashboard" />
+        <h3>Dashboards con insights</h3>
+        <p>Construyo paneles interactivos que muestran de forma clara lo que los datos desestructurados revelan .</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="problema-section">
+    <h2 class="problema-title">¿Tienes alguno de estos problemas?</h2>
+    <a href="https://forms.gle/UGJ5ZG5CX6zcE9Tm7" target="_blank" class="formulario-btn">
+      Cuéntamelo aquí
+    </a>
+  </section>
+   <!-- Footer opcional -->
+  <footer class="mt-20 text-center text-gray-400 text-sm pb-8">
+    © 2025 Juan Gonzalez · Todos los derechos reservados
+  </footer>
+
+  <!-- Inicializar la animación de partículas -->
+  <!-- Cargar script de particles.js -->
+  <script src="static/js/particles.js"></script>
+
+  <!-- Inicializar particles.js con el archivo de configuración JSON -->
+  <script>
+      // Cargar el archivo particles.json de forma dinámica
+      fetch('static/json/particles.json')
+          .then(response => response.json())
+          .then(data => {
+              // Inicializar particles.js con los datos del archivo JSON
+              particlesJS('particles-js', data);
+          });
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,509 @@
+/* El resto del CSS permanece igual */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  color: #e2e2e2;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  text-align: center;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.hero .container {
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  color: #ffffff;
+}
+
+.wave {
+  display: inline-block;
+  animation: wave-animation 2s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.badges {
+  margin: 1rem 0;
+}
+
+.badge {
+  display: inline-block;
+  color: #b1b1b1;
+  font-weight: bold;
+  font-size: 0.75rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  margin: 0.3rem;
+  letter-spacing: 0.5px;
+}
+
+.social-links {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.social-links a {
+  color: #e2e2e2;
+  margin: 0 0.3rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #00d9ff;
+}
+
+.section {
+  opacity: 1;
+  transform: translateY(0); /* La sección ya está visible por defecto */
+}
+
+.about {
+  padding: 4rem 1.5rem;
+  color: #eaeaea;
+  text-align: center;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #00d9ff;
+  position: relative;
+}
+
+.about h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #00d9ff;
+  margin: 1rem auto 0;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.about .accent {
+  color: #00d9ff;
+  font-weight: bold;
+}
+
+.about-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 0.8rem;
+}
+
+.about-skills span {
+  background: #2a2a32;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  color: #d2d2d2;
+  transition: background 0.3s ease;
+}
+
+.about-skills span:hover {
+  background: #00d9ff;
+  color: #000;
+}
+
+/* Fondo de partículas */
+#particles-js {
+  position: fixed; /* Cambiado a fixed para que se mantenga fijo mientras se hace scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Se asegura de que ocupe toda la altura de la página */
+  z-index: -1; /* Asegura que el fondo esté detrás del contenido */
+  background-color: #0f0f11; /* Fondo oscuro para el contraste */
+}
+.logo-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.floating-logo {
+  filter: drop-shadow(0 0 10px #00d9ff);
+  transition: filter 0.3s ease;
+}
+
+.floating-logo:hover {
+  filter: drop-shadow(0 0 20px #00d9ff);
+}
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.skill-card {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px; /* estilo pill */
+  padding: 0.6rem 1.2rem;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.skill-card img {
+  width: 36px;
+  height: 36px;
+}
+
+.skill-card span {
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.skill-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
+}
+/* Contenedor general para centrar todo el contenido */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Sección de proyectos como antes, pero adaptada */
+.projects-section {
+  padding: 4rem 0;
+  color: #eaeaea;
+  width: 80%;
+  padding: 200px;
+}
+
+.projects-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #00d9ff;
+  text-align: center;
+}
+
+/* Cards de proyectos (sin cambios aquí) */
+.project-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 217, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.1);
+}
+
+.project-card {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 2rem auto;
+  max-width: 960px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+}
+
+.project-image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+}
+
+.project-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+  color: #fff;
+}
+
+.project-content p {
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.project-skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-skills .skill-card {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.project-skills .skill-card img {
+  width: 20px;
+  height: 20px;
+}
+
+.project-image {
+  width: 70%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.servicios-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #00bfff; /* Tu color azul principal */
+}
+
+
+.servicios-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.servicio-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.servicio-card:hover {
+  transform: translateY(-10px);
+}
+
+.servicio-card img {
+  width: 60px;
+  margin-bottom: 20px;
+  filter: brightness(1.2);
+}
+
+.servicio-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.servicio-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .servicios-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  /* Sección de proyectos responsiva */
+  .projects-section {
+    width: 100%;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+  }
+
+  .project-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 1.5rem;
+    box-sizing: border-box;
+  }
+
+  .project-image {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-radius: 12px 12px 12px 12px;
+    margin-top: 1rem;
+  }
+
+  .project-content {
+    padding: 1rem;
+  }
+
+  /* Logo flotante centrado y más pequeño en móviles */
+  .floating-logo {
+    max-width: 90%;
+  }
+}
+.problema-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  z-index: 1; /* Asegura que esté sobre el canvas de particles.js */
+}
+
+.problema-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.formulario-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+  transition: all 0.3s ease;
+}
+.formulario-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(124, 58, 237, 0.6);
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+}
+.custom-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  backdrop-filter: blur(10px); /* backdrop-blur */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* shadow-md */
+}
+
+.navbar-container {
+  max-width: 1280px; /* similar to max-w-7xl */
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: center;
+}
+
+.navbar-logo:hover {
+  color: #60a5fa; /* text-blue-400 */
+}
+
+.navbar-links a {
+  margin-left: 1.5rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #60a5fa; /* hover:text-blue-400 */
+}
+
+@media (max-width: 640px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: center; /* ✅ Ahora se centra */
+    text-align: center;
+  }
+
+  .navbar-links {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+  }
+
+  .navbar-links a {
+    margin-bottom: 0.5rem;
+  }
+}
+

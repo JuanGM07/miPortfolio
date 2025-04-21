@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="min-h-screen pt-32 px-4 md:px-20 lg:px-48 text-white relative z-10">
+
+  <!-- Título del Proyecto -->
+  <h1 class="text-4xl md:text-5xl font-bold mb-6 border-b-4 border-blue-500 inline-block pb-2">
+    DataBaseQuery
+  </h1>
+
+  <!-- Imagen destacada -->
+  <img src="{{ url_for('static', filename='images/dataquery1.png') }}"
+       alt="databasequery"
+       class="w-full max-w-4xl rounded-xl mx-auto shadow-lg my-10">
+
+  <!-- Descripción -->
+  <p class="text-lg leading-relaxed mb-8">
+    Esta herramienta es un modelo NL2SQL, la cual recibe lenguaje natural y lo transforma a SQL para comunicarse con una base de datos. Ideal para que empleados que no conozcan de este lenguaje puedan hacer consultas a las bases de datos de la empresa.
+  </p>
+
+  <p class="text-lg leading-relaxed mb-8">
+    Esta base de datos es de prueba, y solo muestro 10 filas para que no se ralentize la carga, como ejemplo.
+  </p>
+
+
+
+  <section id="funcionamiento" class="max-w-5xl mx-auto px-4 py-20 text-white">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">¿Cómo funciona DataBaseQuery?</h2>
+  
+    <!-- Bloque 1 -->
+    <div class="flex flex-col md:flex-row items-center mb-16 gap-8">
+      <img src="{{ url_for('static', filename='images/dataquery2.png') }}" alt="Paso 1" class="w-full md:w-1/2 rounded-lg shadow-lg">
+      <div class="md:w-1/2">
+        <h3 class="text-xl font-semibold mb-4">1. Base de datos</h3>
+        <p class="text-gray-300">
+            Para que tenga sentido usar esta herramienta debemos de tener una base de datos. Yo utilizo una de prueba, de e-commerce, si ejecutais el codigo de prueba
+            vereis que solo muestro 10 filas para que se visualice, pero tengo en cuenta la base de datos al completo en la logica de programación.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Bloque 2 -->
+    <div class="flex flex-col-reverse md:flex-row items-center mb-16 gap-8">
+      <div class="md:w-1/2">
+        <h3 class="text-xl font-semibold mb-4">2. Escribir y enviar la query</h3>
+        <p class="text-gray-300">
+            Después escribimos nuestra query, que es lo que queremos saber de nuestra base de datos, escrito en lenguaje natural, lo que lo hace muy útil
+            para empleados que no sean tan técnicos, ni conozcan lenguaje SQL.
+        </p>
+      </div>
+      <img src="{{ url_for('static', filename='images/dataquery3.png') }}" alt="Paso 2" class="w-full md:w-1/2 rounded-lg shadow-lg">
+    </div>
+  
+    <!-- Bloque 3 -->
+    <div class="flex flex-col md:flex-row items-center gap-8">
+      <img src="{{ url_for('static', filename='images/dataquery1.png') }}" alt="Paso 3" class="w-full md:w-1/2 rounded-lg shadow-lg">
+      <div class="md:w-1/2">
+        <h3 class="text-xl font-semibold mb-4">3. Visualización del Resultado</h3>
+        <p class="text-gray-300">
+          Finalmente, solo nos queda ver el resultado de la query. Y hacer todas las que necesitemos, solo dependerá del límite fijado por el gasto de nuestra API de OpenAI
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Características principales -->
+  <h2 class="text-2xl font-semibold mb-4 text-blue-400">Características clave:</h2>
+  <ul class="list-disc list-inside space-y-2 mb-8">
+    <li>Conversión de Lenguaje Natural a SQL (NL2SQL)</li>
+    <li>Base de Datos de Prueba Incorporad</li>
+    <li>Preparado para Escalabilidad</li>
+    <li>Interfaz Simple y Accesible</li>
+    <li>Diseño compacto y adaptado a pantallas 1080p</li>
+  </ul>
+
+  <!-- Tecnologías utilizadas -->
+  <h2 class="text-2xl font-semibold mb-4 text-blue-400">Tecnologías utilizadas:</h2>
+  <div class="flex flex-wrap gap-3 mb-10">
+    <span class="bg-blue-800 text-white px-3 py-1 rounded-full text-sm">Python</span>
+    <span class="bg-blue-800 text-white px-3 py-1 rounded-full text-sm">Flask</span>
+    <span class="bg-blue-800 text-white px-3 py-1 rounded-full text-sm">OpenAI GPT</span>
+    <span class="bg-blue-800 text-white px-3 py-1 rounded-full text-sm">Pandas</span>
+    <span class="bg-blue-800 text-white px-3 py-1 rounded-full text-sm">SQlite</span>
+    <span class="bg-blue-800 text-white px-3 py-1 rounded-full text-sm">Langchain</span>
+  </div>
+
+  <!-- Enlace al repositorio -->
+  <a href="https://github.com/JuanGM07/DataBaseQuery" target="_blank"
+     class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl shadow-lg transition-all duration-300">
+    Ver en GitHub
+  </a>
+
+</div>
+
+{% endblock %}
