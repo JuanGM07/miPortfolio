@@ -30,6 +30,10 @@ def chabot():
 def sentimentanalysis():
     return render_template("sentimentanalysis.html")
 
+@app.route("/proyectos/clusterclient")
+def clusterclient():
+    return render_template("clusterclient.html")
+
 @app.route("/faqs")
 def faqs():
     return render_template("faqs.html")
@@ -47,4 +51,3 @@ def vercel_handler(request):
     with app.app_context():
         response = app.full_dispatch_request()
     return response
-
