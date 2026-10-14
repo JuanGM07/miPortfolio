@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>JGM | Engineering &amp; Tech Solutions</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css', v='project-filters-20261014') }}" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
@@ -393,14 +393,19 @@
 
   <!-- Inicializar particles.js con el archivo de configuración JSON -->
   <script>
-    const projectFilters = document.querySelectorAll(".project-filter");
-    const projectCards = document.querySelectorAll(".project-card[data-category]");
+    (() => {
+      const filterGroup = document.querySelector(".project-filters");
+      if (!filterGroup) return;
 
-    projectFilters.forEach((filterButton) => {
-      filterButton.addEventListener("click", () => {
+      const projectCards = document.querySelectorAll(".project-card[data-category]");
+      filterGroup.addEventListener("click", (event) => {
+        const filterButton = event.target.closest(".project-filter");
+        if (!filterButton || !filterGroup.contains(filterButton)) return;
+
         const selectedCategory = filterButton.dataset.filter;
+        if (!["all", "hardware", "software"].includes(selectedCategory)) return;
 
-        projectFilters.forEach((button) => {
+        filterGroup.querySelectorAll(".project-filter").forEach((button) => {
           const isActive = button === filterButton;
           button.classList.toggle("is-active", isActive);
           button.setAttribute("aria-pressed", String(isActive));
@@ -410,7 +415,7 @@
           card.hidden = selectedCategory !== "all" && card.dataset.category !== selectedCategory;
         });
       });
-    });
+    })();
   </script>
   <script>
       // Cargar el archivo particles.json de forma dinámica
