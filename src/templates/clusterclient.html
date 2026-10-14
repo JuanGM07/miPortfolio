@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="min-h-screen pt-32 px-4 md:px-20 lg:px-48 text-white relative z-10">
+<div class="project-detail min-h-screen pt-32 px-4 md:px-20 lg:px-48 text-white relative z-10">
 
   <!-- Título del Proyecto -->
   <h1 class="text-4xl md:text-5xl font-bold mb-6 border-b-4 border-blue-500 inline-block pb-2">
@@ -24,7 +24,12 @@
      y tomar decisiones estratégicas basadas en datos.
   </p>
 
-
+  <dl class="case-study-specs" aria-label="Resumen técnico">
+    <div class="case-study-spec"><dt>Entrada</dt><dd>Archivos CSV</dd></div>
+    <div class="case-study-spec"><dt>Algoritmo</dt><dd>K-Means</dd></div>
+    <div class="case-study-spec"><dt>Visualización</dt><dd>Plotly</dd></div>
+    <div class="case-study-spec"><dt>Resultado</dt><dd>Segmentos de clientes</dd></div>
+  </dl>
 
   <section id="funcionamiento" class="max-w-5xl mx-auto px-4 py-20 text-white">
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">¿Cómo funciona ClusterClient?</h2>

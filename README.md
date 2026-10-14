@@ -2,6 +2,23 @@
 
 [![Portada de JGMDataScience](/src/static/images/cover1.png)](https://jgmdatascience.com)
 
+## Ejecutar en local
+
+Desde la raíz del proyecto, crea y activa un entorno virtual, instala las dependencias y arranca Flask:
+
+```powershell
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+python src\app.py
+```
+
+Abre `http://127.0.0.1:5000` en el navegador.
+
+### Solicitudes del dossier Industrial I/O Adapter
+
+El formulario envía las solicitudes directamente a Web3Forms usando la access key pública incluida en el campo oculto del formulario. Configura el correo destinatario de esa clave en el panel de Web3Forms. La clave ya está en el cliente; no añadas credenciales privadas ni contraseñas SMTP al repositorio.
+
 
 ¡Bienvenido a mi portfolio personal!  
 Soy **Juan Gonzalez**, estudiante de Ingeniería Mecánica y apasionado por la programación desde hace más de 3 años. Me dedico a diseñar **soluciones de automatización** para empresas a través del **tratamiento de datos**, **Machine Learning** y **desarrollo web**.

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>JGMDataScience</title>
+  <title>JGM | Engineering &amp; Tech Solutions</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
@@ -17,7 +17,7 @@
   <div id="particles-js"></div>
   <nav class="custom-navbar">
     <div class="navbar-container">
-      <a href="/" class="navbar-logo">JGMDataScience</a>
+      <a href="/" class="navbar-logo">JGM | Engineering &amp; Tech Solutions</a>
       <div class="navbar-links">
         <a href="https://forms.gle/UGJ5ZG5CX6zcE9Tm7">Contacto</a>
         <a href="/faqs">FAQs</a>
@@ -30,15 +30,18 @@
   <section class="hero" id="hero">
     <div class="container">
       <h1>
-        Hi - I'm <span class="highlight">Juan Gonzalez</span>
-        <span class="wave">👋</span>
+        <span class="highlight">Juan Gonzalez</span>
       </h1>
 
       <div class="badges">
-        <span class="badge">ML ENGINEER</span>
-        <span class="badge">PYTHON DEVELOPER</span>
-        <span class="badge">DATA SCIENTIST</span>
+        <span class="badge">EMBEDDED SYSTEMS</span>
+        <span class="badge">DATA &amp; ML ENGINEER</span>
+        <span class="badge">AUTOMATION &amp; TECH</span>
       </div>
+
+      <p class="hero-summary">
+        Diseño e integro soluciones tecnológicas completas: desde el diseño de hardware/firmware hasta el tratamiento de datos y automatización software.
+      </p>
 
       <div class="social-links">
         <a href="https://github.com/JuanGM07" target="_blank">
@@ -59,8 +62,7 @@
     <div class="about-container">
       <h2>Sobre mí</h2>
       <p>
-        Soy <strong>Juan Gonzalez</strong>, tengo 22 años, estudio Ingeniería Mecánica pero mi pasión es la programación desde hace más de 3 años.
-        Me dedico a diseñar <span class="accent">soluciones de automatización</span> para empresas a través de la ciencia de datos y la creación de modelos de aprendizaje automático. 
+        Soy <strong>Juan Gonzalez</strong>, estudio Ingeniería Mecánica y combino el desarrollo de hardware y sistemas embebidos con la Ciencia de Datos y la automatización inteligente: desde el circuito y el firmware hasta el modelo de datos.
       </p>
       <div class="logo-container">
         <img src="/static/images/cover.png" alt="Logo de Juan Gonzalez" class="floating-logo">
@@ -73,48 +75,73 @@
        <!-- Logo flotante aquí si lo has añadido antes -->
 
   <div class="about-skills">
-    <h3>¿Con que trabajo para crear estas soluciones?</h3>
-    <div class="skills-grid">
+    <h3>¿Con qué trabajo?</h3>
+    <div class="tech-stack-grid">
+      <section class="tech-stack-group" aria-labelledby="hardware-stack-title">
+        <h4 id="hardware-stack-title">Hardware &amp; Firmware</h4>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <img src="/static/icons/esp32.jpg" alt="ESP32">
+            <span>ESP32</span>
+          </div>
+          <div class="skill-card">
+            <img src="/static/icons/c++.png" alt="C y C++">
+            <span>C / C++</span>
+          </div>
+          <div class="skill-card">
+            <img src="/static/icons/icon_pcb_design.png" alt="KiCad y diseño PCB">
+            <span>KiCad / PCB Design</span>
+          </div>
+          <div class="skill-card">
+            <img src="/static/icons/comunication_protocols.png" alt="Protocolos industriales e IoT">
+            <span>MQTT / Modbus / I2C / RS-485</span>
+          </div>
+        </div>
+      </section>
+      <section class="tech-stack-group tech-stack-group--software" aria-labelledby="software-stack-title">
+        <h4 id="software-stack-title">Data &amp; Software</h4>
+        <div class="skills-grid">
       <div class="skill-card">
         <img src="/static/icons/python1.webp" alt="Python">
         <span>Python</span>
-      </div>
-      <div class="skill-card">
-        <img src="/static/icons/dagshub.webp" alt="DagsHub">
-        <span>DagsHub</span>
-      </div>
-      <div class="skill-card">
-        <img src="/static/icons/aws.webp" alt="AWS">
-        <span>AWS</span>
-      </div>
-      <div class="skill-card">
-        <img src="/static/icons/tensorflow.png" alt="TensorFlow">
-        <span>TensorFlow</span>
       </div>
       <div class="skill-card">
         <img src="/static/icons/sql.png" alt="SQL">
         <span>SQL</span>
       </div>
       <div class="skill-card">
+        <img src="/static/icons/tensorflow.png" alt="TensorFlow">
+        <span>TensorFlow</span>
+      </div>
+      <div class="skill-card">
+        <img src="/static/icons/flask.svg" alt="Flask">
+        <span>Flask</span>
+      </div>
+      <div class="skill-card">
         <img src="/static/icons/git.png" alt="Git">
         <span>Git</span>
       </div>
       <div class="skill-card">
-        <img src="/static/icons/numpy.png" alt="Numpy">
-        <span>Numpy</span>
+        <img src="/static/icons/aws.webp" alt="AWS">
+        <span>AWS</span>
       </div>
-      <!-- Agrega más según tus habilidades -->
+        </div>
+      </section>
     </div>
   </div>
   </section>
   <section class="projects-section section" id="proyectos">
     <div class="container">
       <h2>Proyectos</h2>  
-  
+      <div class="project-filters" role="group" aria-label="Filtrar proyectos">
+        <button class="project-filter is-active" type="button" data-filter="all" aria-pressed="true">Todos</button>
+        <button class="project-filter" type="button" data-filter="hardware" aria-pressed="false">Hardware &amp; IoT</button>
+        <button class="project-filter" type="button" data-filter="software" aria-pressed="false">Data Science &amp; Software</button>
+      </div>
     <div class="projects-wrapper">
   
       <!-- Proyecto 1 -->
-      <div class="project-card">
+      <div class="project-card" data-category="software">
         <a href="/proyectos/facturdash" target="_blank">
           <img class="project-image" src="/static/images/dashboard.png" alt="Proyecto 1">
         </a>
@@ -144,7 +171,7 @@
       </div>
   
       <!-- Proyecto 2 -->
-      <div class="project-card">
+      <div class="project-card" data-category="software">
         <a href="/proyectos/databasequery" target="_blank">
           <img class="project-image" src="/static/images/databasequery.png" alt="Proyecto 2">
         </a>
@@ -175,7 +202,7 @@
       </div>
 
       <!-- Proyecto 3 -->
-      <div class="project-card">
+      <div class="project-card" data-category="software">
         <a href="/proyectos/chatbot" target="_blank">
           <img class="project-image" src="/static/images/chatbot.png" alt="Proyecto 2">
         </a>
@@ -206,7 +233,7 @@
       </div>
 
       <!-- Proyecto 4 -->
-      <div class="project-card">
+      <div class="project-card" data-category="software">
         <a href="/proyectos/sentimentanalysis" target="_blank">
           <img class="project-image" src="/static/images/sentiment.png" alt="Proyecto 2">
         </a>
@@ -237,7 +264,7 @@
       </div>
 
        <!-- Proyecto 5 -->
-       <div class="project-card">
+       <div class="project-card" data-category="software">
         <a href="/proyectos/clusterclient" target="_blank">
           <img class="project-image" src="/static/images/clusterclient.png" alt="Proyecto 2">
         </a>
@@ -267,7 +294,32 @@
           </div>
         </div>
       </div>
-  
+
+      <!-- Industrial I/O Adapter -->
+      <div class="project-card" data-category="hardware">
+        <a href="/proyectos/industrial-io-adapter" target="_blank" rel="noopener" aria-label="Ver proyecto Industrial I/O Adapter">
+          <img class="project-image" src="/static/images/Industrial-IO-Adapter.jpeg" alt="Industrial I/O Adapter">
+        </a>
+        <div class="project-content">
+          <h3>Industrial I/O Adapter</h3>
+          <p>Adaptador de entradas y salidas para conectar señales de campo con un microcontrolador: entradas aisladas mediante optoacopladores y salidas conmutadas por relé.</p>
+          <div class="project-skills">
+            <div class="skill-card">
+              <img src="/static/icons/icon_pcb_design.png" alt="Diseño de PCB">
+              <span>KiCad / PCB</span>
+            </div>
+            <div class="skill-card">
+              <img src="/static/icons/comunication_protocols.png" alt="Entradas y salidas industriales">
+              <span>Industrial I/O</span>
+            </div>
+            <div class="skill-card">
+              <img src="/static/icons/c++.png" alt="C y C++">
+              <span>Electrónica</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
     </div> <!-- cierre de .container -->
 
@@ -277,25 +329,50 @@
     <h2>¿Qué servicios ofrezco?</h2>
     <div class="servicios-grid">
       <div class="servicio-card">
-        <img src="/static/icons/automation.png" alt="Automatización" />
-        <h3>Automatización de tareas repetitivas</h3>
-        <p>Desarrollo herramientas que reducen el trabajo manual, optimizando procesos internos, y haciéndolos más eficientes.</p>
+        <img src="/static/icons/icon_pcb_design.png" alt="Hardware y prototipado IoT" />
+        <h3>Hardware &amp; Prototipado IoT</h3>
+        <p>Diseño de PCBs personalizadas en KiCad, firmware en C/C++, gestión de energía de bajo consumo e integración de sensores y protocolos.</p>
       </div>
       <div class="servicio-card">
-        <img src="/static/icons/algorithm.png" alt="Limpieza de datos" />
-        <h3>Tratado y limpieza de datos</h3>
-        <p>Transformo datos desordenados en información lista para análisis, visualización o creación de modelos de aprendizaje automático.</p>
+        <img src="/static/icons/automation.png" alt="Automatización" />
+        <h3>Automatización de Procesos</h3>
+        <p>Desarrollo scripts y sistemas para reducir el trabajo manual y eliminar tareas repetitivas en procesos operativos.</p>
       </div>
       <div class="servicio-card">
         <img src="/static/icons/decision-making.png" alt="Modelos" />
-        <h3>Modelos para mejora de rendimiento</h3>
-        <p>Implemento modelos predictivos que ayudan a mejorar métricas principales, ya sea para ingresar más, o gastar menos.</p>
+        <h3>Tratado de Datos &amp; Modelos Predictivos</h3>
+        <p>Modelos de Machine Learning y arquitectura de datos para optimizar costes y respaldar decisiones basadas en información.</p>
       </div>
       <div class="servicio-card">
         <img src="/static/icons/dashboard.png" alt="Dashboard" />
-        <h3>Dashboards con insights</h3>
-        <p>Construyo paneles interactivos que muestran de forma clara lo que los datos desestructurados revelan .</p>
+        <h3>Dashboards &amp; Telemetría</h3>
+        <p>Paneles interactivos en tiempo real para monitorizar métricas de negocio y telemetría de dispositivos IoT.</p>
       </div>
+    </div>
+  </section>
+
+  <section class="work-process-section" aria-labelledby="work-process-title">
+    <div class="work-process-container">
+      <h2 id="work-process-title">Proceso de trabajo</h2>
+      <p class="work-process-intro">Un método claro para convertir necesidades operativas en soluciones fiables y medibles.</p>
+      <ol class="work-process-list">
+        <li class="work-process-step">
+          <span class="work-process-number">01</span>
+          <h3>Toma de Requisitos</h3>
+        </li>
+        <li class="work-process-step">
+          <span class="work-process-number">02</span>
+          <h3>Prototipado &amp; Diseño</h3>
+        </li>
+        <li class="work-process-step">
+          <span class="work-process-number">03</span>
+          <h3>Desarrollo e Integración</h3>
+        </li>
+        <li class="work-process-step">
+          <span class="work-process-number">04</span>
+          <h3>Despliegue &amp; Entrega</h3>
+        </li>
+      </ol>
     </div>
   </section>
 
@@ -316,6 +393,26 @@
 
   <!-- Inicializar particles.js con el archivo de configuración JSON -->
   <script>
+    const projectFilters = document.querySelectorAll(".project-filter");
+    const projectCards = document.querySelectorAll(".project-card[data-category]");
+
+    projectFilters.forEach((filterButton) => {
+      filterButton.addEventListener("click", () => {
+        const selectedCategory = filterButton.dataset.filter;
+
+        projectFilters.forEach((button) => {
+          const isActive = button === filterButton;
+          button.classList.toggle("is-active", isActive);
+          button.setAttribute("aria-pressed", String(isActive));
+        });
+
+        projectCards.forEach((card) => {
+          card.hidden = selectedCategory !== "all" && card.dataset.category !== selectedCategory;
+        });
+      });
+    });
+  </script>
+  <script>
       // Cargar el archivo particles.json de forma dinámica
       fetch('static/json/particles.json')
           .then(response => response.json())
@@ -326,4 +423,3 @@
   </script>
 </body>
 </html>
-
