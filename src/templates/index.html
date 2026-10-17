@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>JGM | Engineering &amp; Tech Solutions</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css', v='project-filters-20261014') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css', v='landing-contact-form-20261017') }}" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
@@ -46,10 +46,10 @@
       <div class="social-links">
         <a href="https://github.com/JuanGM07" target="_blank">
           <i class="fab fa-github"></i> GitHub
-        </a> /
+        </a>
         <a href="https://www.tiktok.com/@jgmdatascience" target="_blank">
           <i class="fab fa-tiktok"></i> TikTok
-        </a> /
+        </a>
         <a href="https://www.linkedin.com/in/jgmdatascience/" target="_blank">
           <i class="fab fa-linkedin"></i> LinkedIn
         </a>
@@ -378,9 +378,91 @@
 
   <section class="problema-section">
     <h2 class="problema-title">¿Tienes alguno de estos problemas?</h2>
-    <a href="https://forms.gle/UGJ5ZG5CX6zcE9Tm7" target="_blank" class="formulario-btn">
+    <button class="formulario-btn" type="button" aria-expanded="false" aria-controls="landing-contact-form">
       Cuéntamelo aquí
-    </a>
+    </button>
+    <form class="landing-contact-form" id="landing-contact-form" action="https://api.web3forms.com/submit" method="POST" hidden>
+      <input type="hidden" name="access_key" value="d8094b32-6256-4d29-a90f-d60877f97c1d">
+      <input type="hidden" name="subject" value="Nueva consulta desde el portfolio">
+      <input type="hidden" name="from_name" value="Portfolio de Juan Gonzalez">
+      <div class="landing-contact-heading">
+        <p class="landing-contact-kicker">CUÉNTAME SOBRE TU PROYECTO</p>
+        <h3>Busquemos la solución adecuada</h3>
+        <p>Completa estos datos y me pondré en contacto contigo para conocer mejor tu necesidad.</p>
+      </div>
+      <div class="landing-contact-personal">
+        <label>
+          <span>Nombre <span aria-hidden="true">*</span></span>
+          <input type="text" name="name" autocomplete="name" maxlength="120" required>
+        </label>
+        <label>
+          <span>Teléfono <span class="landing-contact-optional">(opcional)</span></span>
+          <input type="tel" name="phone" autocomplete="tel" maxlength="40">
+        </label>
+        <label class="landing-contact-email">
+          <span>Correo electrónico <span aria-hidden="true">*</span></span>
+          <input type="email" name="email" autocomplete="email" maxlength="254" required>
+        </label>
+      </div>
+      <div class="landing-contact-question" role="group" aria-labelledby="landing-contact-situation-title" data-required-group="situation" aria-required="true" tabindex="-1">
+        <h3 class="landing-contact-question-title" id="landing-contact-situation-title">¿Cuál de estas situaciones se parece más a la suya? <span aria-hidden="true">*</span></h3>
+        <div class="landing-contact-choices">
+          <label><input type="checkbox" name="situation" value="No tengo visibilidad clara de mis métricas o KPIs."><span>No tengo visibilidad clara de mis métricas o KPIs.</span></label>
+          <label><input type="checkbox" name="situation" value="Hago muchas tareas repetitivas y quiero automatizarlas."><span>Hago muchas tareas repetitivas y quiero automatizarlas.</span></label>
+          <label><input type="checkbox" name="situation" value="Tengo muchos datos pero no los analizo."><span>Tengo muchos datos pero no los analizo.</span></label>
+          <label><input type="checkbox" name="situation" value="Quiero aplicar inteligencia artificial pero no sé cómo empezar."><span>Quiero aplicar inteligencia artificial pero no sé cómo empezar.</span></label>
+          <label><input type="checkbox" name="situation" value="Me interesa scrapear información útil de internet."><span>Me interesa scrapear información útil de internet.</span></label>
+          <label><input type="checkbox" name="situation" value="Otro"><span>Otro</span></label>
+        </div>
+        <input class="landing-contact-other" type="text" name="situation_other" placeholder="Cuéntame cuál es tu situación" maxlength="500" aria-label="Otra situación" hidden>
+      </div>
+      <div class="landing-contact-question" role="group" aria-labelledby="landing-contact-impact-title" data-required-group="impact" aria-required="true" tabindex="-1">
+        <h3 class="landing-contact-question-title" id="landing-contact-impact-title">¿Qué impacto tendría para usted resolver este problema? <span aria-hidden="true">*</span></h3>
+        <div class="landing-contact-choices">
+          <label><input type="checkbox" name="impact" value="Ahorrar tiempo."><span>Ahorrar tiempo.</span></label>
+          <label><input type="checkbox" name="impact" value="Aumentar ingresos o reducir gastos."><span>Aumentar ingresos o reducir gastos.</span></label>
+          <label><input type="checkbox" name="impact" value="Tener informes visuales para decidir mejor."><span>Tener informes visuales para decidir mejor.</span></label>
+          <label><input type="checkbox" name="impact" value="Reducir errores manuales."><span>Reducir errores manuales.</span></label>
+          <label><input type="checkbox" name="impact" value="Otro"><span>Otro</span></label>
+        </div>
+        <input class="landing-contact-other" type="text" name="impact_other" placeholder="Cuéntame qué impacto buscas" maxlength="500" aria-label="Otro impacto" hidden>
+      </div>
+      <div class="landing-contact-question landing-contact-urgency" role="group" aria-labelledby="landing-contact-urgency-title">
+        <h3 class="landing-contact-question-title" id="landing-contact-urgency-title">¿Cuán urgente es para usted resolver este problema? <span aria-hidden="true">*</span></h3>
+        <p class="landing-contact-hint">¿Cuándo te gustaría resolverlo?</p>
+        <div class="landing-contact-range">
+          <input id="landing-contact-urgency" type="range" name="urgency" min="1" max="5" step="1" value="3" aria-label="Urgencia de 1 a 5" aria-valuetext="3 de 5">
+          <output for="landing-contact-urgency">3</output>
+          <div class="landing-contact-scale" aria-hidden="true">
+            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+          </div>
+          <div class="landing-contact-scale-labels" aria-hidden="true">
+            <span>Explorando</span><span>Urgente</span>
+          </div>
+        </div>
+      </div>
+      <div class="landing-contact-question" role="group" aria-labelledby="landing-contact-storage-title" data-required-group="data_storage" aria-required="true" tabindex="-1">
+        <h3 class="landing-contact-question-title" id="landing-contact-storage-title">¿Dónde almacena sus datos? <span aria-hidden="true">*</span></h3>
+        <div class="landing-contact-choices">
+          <label><input type="checkbox" name="data_storage" value="Base de datos"><span>Base de datos</span></label>
+          <label><input type="checkbox" name="data_storage" value="Excel"><span>Excel</span></label>
+          <label><input type="checkbox" name="data_storage" value="Cloud (AWS, Azure, Google Cloud...)"><span>Cloud (AWS, Azure, Google Cloud...)</span></label>
+          <label><input type="checkbox" name="data_storage" value="Sistemas ERP (como SAP)"><span>Sistemas ERP (como SAP)</span></label>
+          <label><input type="checkbox" name="data_storage" value="Otro"><span>Otro</span></label>
+        </div>
+        <input class="landing-contact-other" type="text" name="data_storage_other" placeholder="Indica dónde almacenas tus datos" maxlength="500" aria-label="Otro lugar de almacenamiento" hidden>
+      </div>
+      <label>
+        <span>¿Qué tipo de empresa o proyecto tiene? <span aria-hidden="true">*</span></span>
+        <input type="text" name="project_type" maxlength="1000" required>
+      </label>
+      <label>
+        <span>¿Necesita contarme algún detalle más?</span>
+        <textarea name="message" rows="5" maxlength="5000"></textarea>
+      </label>
+      <p class="landing-contact-status" role="status" aria-live="polite" hidden></p>
+      <button class="landing-contact-submit" type="submit">Enviar mensaje</button>
+    </form>
   </section>
    <!-- Footer opcional -->
   <footer class="mt-20 text-center text-gray-400 text-sm pb-8">
@@ -414,6 +496,115 @@
         projectCards.forEach((card) => {
           card.hidden = selectedCategory !== "all" && card.dataset.category !== selectedCategory;
         });
+      });
+    })();
+  </script>
+  <script>
+    (() => {
+      const contactForm = document.querySelector("#landing-contact-form");
+      if (!contactForm) return;
+
+      const contactToggle = document.querySelector(".formulario-btn");
+      const status = contactForm.querySelector(".landing-contact-status");
+      const submitButton = contactForm.querySelector(".landing-contact-submit");
+      const urgency = contactForm.querySelector("[name='urgency']");
+      const urgencyOutput = contactForm.querySelector(".landing-contact-range output");
+
+      contactToggle.addEventListener("click", () => {
+        const isExpanded = contactToggle.getAttribute("aria-expanded") === "true";
+        contactToggle.setAttribute("aria-expanded", String(!isExpanded));
+        contactForm.hidden = isExpanded;
+
+        if (!isExpanded) {
+          contactForm.scrollIntoView({ behavior: "smooth", block: "start" });
+          contactForm.querySelector("[name='name']").focus({ preventScroll: true });
+        }
+      });
+
+      urgency.addEventListener("input", () => {
+        urgencyOutput.value = urgency.value;
+        urgency.setAttribute("aria-valuetext", `${urgency.value} de 5`);
+      });
+
+      contactForm.querySelectorAll(".landing-contact-question").forEach((question) => {
+        const otherInput = question.querySelector(".landing-contact-other");
+        if (!otherInput) return;
+
+        question.addEventListener("change", (event) => {
+          if (event.target.type !== "checkbox") return;
+          event.target.setCustomValidity("");
+          const isOther = [...question.querySelectorAll('input[type="checkbox"]')]
+            .some((checkbox) => checkbox.value === "Otro" && checkbox.checked);
+          otherInput.hidden = !isOther;
+          otherInput.required = isOther;
+          if (!isOther) otherInput.value = "";
+        });
+      });
+
+      contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const unansweredQuestion = [...contactForm.querySelectorAll("[data-required-group]")]
+          .find((question) => !question.querySelector('input[type="checkbox"]:checked'));
+
+        if (unansweredQuestion) {
+          status.hidden = false;
+          status.className = "landing-contact-status is-error";
+          status.textContent = "Selecciona al menos una opción en cada pregunta marcada con asterisco.";
+          unansweredQuestion.focus({ preventScroll: true });
+          unansweredQuestion.scrollIntoView({ behavior: "smooth", block: "center" });
+          return;
+        }
+
+        status.hidden = false;
+        status.className = "landing-contact-status is-loading";
+        status.textContent = "Enviando tu mensaje...";
+        submitButton.disabled = true;
+        submitButton.textContent = "Enviando...";
+
+        try {
+          const submissionData = new FormData(contactForm);
+          const formData = Object.fromEntries(submissionData);
+          ["situation", "impact", "data_storage"].forEach((fieldName) => {
+            formData[fieldName] = submissionData.getAll(fieldName).join("; ");
+          });
+          formData.replyto = formData.email;
+          formData.urgency = urgency.value;
+
+          const response = await fetch(contactForm.action, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json"
+            },
+            body: JSON.stringify(formData)
+          });
+          const result = await response.json();
+
+          if (!response.ok || !result.success) {
+            throw new Error(
+              result.message ||
+              result.body?.message ||
+              "No se pudo enviar el mensaje. Inténtalo de nuevo."
+            );
+          }
+
+          contactForm.reset();
+          contactForm.querySelectorAll(".landing-contact-other").forEach((input) => {
+            input.hidden = true;
+            input.required = false;
+          });
+          urgencyOutput.value = urgency.value;
+          urgency.setAttribute("aria-valuetext", `${urgency.value} de 5`);
+          contactForm.hidden = false;
+          status.className = "landing-contact-status is-success";
+          status.textContent = "¡Gracias! Tu mensaje se ha enviado correctamente.";
+        } catch (error) {
+          status.className = "landing-contact-status is-error";
+          status.textContent = error.message || "No se pudo enviar el mensaje. Inténtalo de nuevo.";
+        } finally {
+          submitButton.disabled = false;
+          submitButton.textContent = "Enviar mensaje";
+        }
       });
     })();
   </script>
