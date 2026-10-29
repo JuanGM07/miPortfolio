@@ -40,10 +40,33 @@ def clusterclient():
 def industrial_io_adapter():
     return render_template("industrial_io_adapter.html")
 
+@app.route("/proyectos/priority-display")
+def priority_display():
+    return render_template("priority_display.html")
+
 @app.route("/models/industrial-io-adapter.glb")
 def industrial_io_adapter_model():
     compressed = request.accept_encodings["gzip"] > 0
     model_path = Path(app.static_folder) / "images" / "Industrial_IO_Adapter.optimized.glb"
+    if compressed:
+        model_path = model_path.with_suffix(model_path.suffix + ".gz")
+
+    response = send_file(
+        model_path,
+        mimetype="model/gltf-binary",
+        conditional=False,
+        etag=True,
+        max_age=86400,
+    )
+    response.vary.add("Accept-Encoding")
+    if compressed:
+        response.headers["Content-Encoding"] = "gzip"
+    return response
+
+@app.route("/models/priority-display.glb")
+def priority_display_model():
+    compressed = request.accept_encodings["gzip"] > 0
+    model_path = Path(app.static_folder) / "images" / "PriorityDisplay.glb"
     if compressed:
         model_path = model_path.with_suffix(model_path.suffix + ".gz")
 

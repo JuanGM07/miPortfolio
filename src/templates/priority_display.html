@@ -1,0 +1,341 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="preload" as="fetch"
+      href="{{ url_for('priority_display_model') }}"
+      fetchpriority="high"
+      crossorigin>
+<link rel="modulepreload" href="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js">
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
+
+<article class="project-detail case-study-shell pcb-case-study relative z-10" aria-labelledby="project-title">
+  <header class="case-study-hero">
+    <p class="industrial-io-kicker">EMBEDDED SYSTEMS &amp; HARDWARE ENGINEERING</p>
+    <h1 id="project-title">Priority Display</h1>
+    <p class="industrial-io-subtitle">
+      Sistema embebido de ultra bajo consumo para gestionar tareas, enfoque y organización personal.
+    </p>
+    <div class="project-tech-tags" aria-label="Tecnologías del proyecto">
+      <span class="project-tech-tag">ESP32 SoC</span>
+      <span class="project-tech-tag">KiCad EDA</span>
+      <span class="project-tech-tag">4-Layer PCB Stackup</span>
+      <span class="project-tech-tag">USB Type-C</span>
+      <span class="project-tech-tag">E-Paper Display Interface</span>
+      <span class="project-tech-tag">LiPo Battery Management</span>
+      <span class="project-tech-tag">Low-Power Optimization</span>
+    </div>
+  </header>
+
+  <figure class="case-study-render case-study-model-stage">
+    <div class="case-study-model-viewport">
+      <model-viewer
+        class="case-study-model-viewer"
+        src="{{ url_for('priority_display_model') }}"
+        poster="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+        alt="Modelo 3D de Priority Display"
+        camera-controls
+        camera-target="auto auto auto"
+        min-camera-orbit="auto auto 60%"
+        max-camera-orbit="auto auto 250%"
+        minimum-render-scale="1"
+        auto-rotate
+        auto-rotate-delay="1500"
+        rotation-per-second="8deg"
+        interaction-prompt="auto"
+        environment-image="neutral"
+        loading="eager"
+        shadow-intensity="1"
+        shadow-softness="0.8"
+        exposure="1">
+        <p class="case-study-model-fallback" hidden>
+          No se pudo cargar el visor 3D. Vuelve a intentarlo o consulta las especificaciones técnicas.
+        </p>
+      </model-viewer>
+    </div>
+    <figcaption>Modelo 3D interactivo: arrastra o toca para girar y usa la rueda o el gesto de pinza para acercar.</figcaption>
+  </figure>
+
+  <section class="case-study-section industrial-io-overview" aria-labelledby="about-project-title">
+    <p class="industrial-io-kicker">DISEÑO PARA EL ENFOQUE Y LA AUTONOMÍA</p>
+    <h2 id="about-project-title">Una agenda física, silenciosa y de bajo consumo</h2>
+    <p class="industrial-io-summary">
+      Dispositivo de hardware embebido diseñado para la gestión de tareas, enfoque y organización personal mediante una interfaz de ultra bajo consumo. El núcleo del sistema está construido sobre una arquitectura personalizada en PCB de 4 capas de alta densidad, optimizada para garantizar la máxima integridad de señal y eficiencia energética.
+    </p>
+    <p class="industrial-io-summary">
+      Incorpora control de alimentación inteligente y carga mediante conector USB-C reversible, interfaz dedicada para baterías LiPo de perfil ultraplano y conector FPC de alta precisión para pantallas de tinta electrónica (e-paper), ofreciendo una legibilidad similar al papel sin fatiga visual. Su interacción física se resuelve mediante una matriz ergonómica de cuatro pulsadores táctiles dedicados para una navegación rápida y sin distracciones. La circuitería integra antenas de conectividad inalámbrica con zonas de guarda aisladas y reguladores LDO de caída mínima, asegurando una autonomía prolongada en ciclos continuos de suspensión profunda (deep-sleep).
+    </p>
+  </section>
+
+  <section class="case-study-section industrial-io-specifications" aria-labelledby="technical-specifications-title">
+    <div class="industrial-io-section-heading">
+      <p class="industrial-io-kicker">DESGLOSE DE INGENIERÍA</p>
+      <h2 id="technical-specifications-title">Especificaciones técnicas</h2>
+    </div>
+    <ul class="industrial-io-spec-grid">
+      <li class="industrial-io-spec-card">
+        <span class="industrial-io-spec-index" aria-hidden="true">01</span>
+        <h3>Arquitectura</h3>
+        <p>Microcontrolador inalámbrico ESP32 de bajo consumo (Wi-Fi / BLE).</p>
+      </li>
+      <li class="industrial-io-spec-card">
+        <span class="industrial-io-spec-index" aria-hidden="true">02</span>
+        <h3>Placa</h3>
+        <p>PCB industrial de 4 capas (FR-4, stackup optimizado para distribución de masa y potencia).</p>
+      </li>
+      <li class="industrial-io-spec-card">
+        <span class="industrial-io-spec-index" aria-hidden="true">03</span>
+        <h3>Alimentación</h3>
+        <p>Carga y comunicación vía USB Type-C; conector JST PH 2.0 mm para baterías LiPo.</p>
+      </li>
+      <li class="industrial-io-spec-card">
+        <span class="industrial-io-spec-index" aria-hidden="true">04</span>
+        <h3>Pantalla compatible</h3>
+        <p>Módulos E-Paper de alta resolución vía bus SPI / FPC.</p>
+      </li>
+      <li class="industrial-io-spec-card">
+        <span class="industrial-io-spec-index" aria-hidden="true">05</span>
+        <h3>Entradas y control</h3>
+        <p>4 botones táctiles integrados de respuesta directa.</p>
+      </li>
+      <li class="industrial-io-spec-card">
+        <span class="industrial-io-spec-index" aria-hidden="true">06</span>
+        <h3>Gestión térmica y EMC</h3>
+        <p>Vías térmicas dedicadas y aislamiento estricto de RF.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="industrial-io-contact" aria-labelledby="priority-display-contact-title">
+    <div class="industrial-io-contact-copy">
+      <p class="industrial-io-kicker">¿DESARROLLAMOS TU PRÓXIMO DISPOSITIVO?</p>
+      <h2 id="priority-display-contact-title">Hablemos de los requisitos de tu proyecto</h2>
+      <p>Solicita más información técnica y conversemos sobre cómo adaptar la solución a tu aplicación.</p>
+    </div>
+    <button class="case-study-button case-study-button-primary industrial-io-request-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="priority-display-dossier-request">
+      Solicitar dossier técnico y esquemáticos completos
+    </button>
+  </section>
+
+  <section class="industrial-io-request" id="priority-display-dossier-request" aria-label="Solicitud de dossier técnico" hidden>
+    <div class="industrial-io-request-layout">
+      <form class="industrial-io-form"
+            action="https://api.web3forms.com/submit"
+            method="POST">
+        <input type="hidden" name="access_key" value="d8094b32-6256-4d29-a90f-d60877f97c1d">
+        <input type="hidden" name="subject" value="Solicitud de dossier técnico - Priority Display">
+        <input type="hidden" name="from_name" value="Portfolio · Priority Display">
+        <div class="industrial-io-form-heading">
+          <p class="industrial-io-kicker">CUÉNTANOS QUÉ NECESITAS</p>
+          <h2>Solicita información para tu proyecto</h2>
+          <p>Déjanos tus datos y una descripción breve; responderemos para concretar el alcance técnico.</p>
+        </div>
+
+        <div class="industrial-io-form-grid">
+          <label class="industrial-io-field">
+            <span>Nombre <span aria-hidden="true">*</span></span>
+            <input name="name" autocomplete="name" maxlength="120" required>
+          </label>
+          <label class="industrial-io-field">
+            <span>Teléfono <span class="industrial-io-optional">(opcional)</span></span>
+            <input name="phone" type="tel" autocomplete="tel" maxlength="40">
+          </label>
+          <label class="industrial-io-field industrial-io-field-wide">
+            <span>Correo electrónico <span aria-hidden="true">*</span></span>
+            <input name="email" type="email" autocomplete="email" maxlength="254" placeholder="nombre@empresa.com" required>
+          </label>
+        </div>
+
+        <fieldset class="industrial-io-choice-group">
+          <legend>¿Qué necesitas? <span aria-hidden="true">*</span></legend>
+          <div class="industrial-io-choice-list">
+            <label class="industrial-io-choice">
+              <input type="radio" name="request_type" value="new_design" required>
+              <span>Diseño nuevo</span>
+            </label>
+            <label class="industrial-io-choice">
+              <input type="radio" name="request_type" value="design_review">
+              <span>Revisar un diseño</span>
+            </label>
+            <label class="industrial-io-choice">
+              <input type="radio" name="request_type" value="manufacturing">
+              <span>Fabricar un diseño existente</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="industrial-io-choice-group">
+          <legend>¿Cuántas unidades estimas?</legend>
+          <div class="industrial-io-choice-list">
+            <label class="industrial-io-choice">
+              <input type="radio" name="units" value="1-10">
+              <span>1–10</span>
+            </label>
+            <label class="industrial-io-choice">
+              <input type="radio" name="units" value="10-100">
+              <span>10–100</span>
+            </label>
+            <label class="industrial-io-choice">
+              <input type="radio" name="units" value="100-1000">
+              <span>100–1.000</span>
+            </label>
+            <label class="industrial-io-choice">
+              <input type="radio" name="units" value="1000+">
+              <span>Más de 1.000</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <label class="industrial-io-field">
+          <span>Cuéntanos sobre tu dispositivo <span aria-hidden="true">*</span></span>
+          <textarea name="details" rows="5" maxlength="5000" placeholder="Funciones, pantalla, alimentación, conectividad, dimensiones o requisitos de autonomía..." required></textarea>
+        </label>
+        <label class="industrial-io-field">
+          <span>Enlace a diseño o archivos <span class="industrial-io-optional">(opcional)</span></span>
+          <input name="design_link" type="url" maxlength="2048" placeholder="https://">
+        </label>
+
+        <label class="industrial-io-consent">
+          <input type="checkbox" name="consent" value="yes" required>
+          <span>Acepto que se utilicen mis datos para responder a esta solicitud.</span>
+        </label>
+
+        <input class="industrial-io-honeypot" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <p class="industrial-io-form-status" role="status" aria-live="polite" hidden></p>
+        <button class="case-study-button case-study-button-primary industrial-io-submit" type="submit">
+          Enviar solicitud
+        </button>
+      </form>
+
+      <aside class="industrial-io-request-details" aria-label="Entregables y proceso de trabajo">
+        <section class="industrial-io-deliverables" aria-labelledby="priority-display-deliverables-title">
+          <p class="industrial-io-kicker">RESULTADO DEL PROYECTO</p>
+          <h2 id="priority-display-deliverables-title">¿Qué recibes?</h2>
+          <ul>
+            <li>Esquemático y diseño de la PCB.</li>
+            <li>Archivos de fabricación: Gerber, BOM y Pick &amp; Place.</li>
+            <li>Ficheros editables del diseño para futuras revisiones.</li>
+            <li>Integración de firmware, pantalla y gestión de energía según el alcance acordado.</li>
+          </ul>
+        </section>
+
+        <section class="industrial-io-workflow" aria-labelledby="priority-display-workflow-title">
+          <p class="industrial-io-kicker">DE LA IDEA A LA PUESTA EN MARCHA</p>
+          <h2 id="priority-display-workflow-title">Cómo trabajamos</h2>
+          <ol>
+            <li>
+              <span class="industrial-io-workflow-step">01</span>
+              <div><h3>Definimos requisitos</h3><p>Revisamos funciones, pantalla, alimentación y autonomía.</p></div>
+            </li>
+            <li>
+              <span class="industrial-io-workflow-step">02</span>
+              <div><h3>Diseño y revisión</h3><p>Preparamos el esquema y la PCB para validar la solución.</p></div>
+            </li>
+            <li>
+              <span class="industrial-io-workflow-step">03</span>
+              <div><h3>Fabricación y pruebas</h3><p>Coordinamos el montaje y las comprobaciones del dispositivo.</p></div>
+            </li>
+            <li>
+              <span class="industrial-io-workflow-step">04</span>
+              <div><h3>Entrega y puesta en marcha</h3><p>Documentamos la entrega y damos soporte de integración.</p></div>
+            </li>
+          </ol>
+          <p class="industrial-io-workflow-note">Plazos y entregables se concretan tras revisar los requisitos.</p>
+        </section>
+      </aside>
+    </div>
+  </section>
+
+  <section class="industrial-io-success" role="status" aria-live="polite" hidden>
+    <span class="industrial-io-success-icon" aria-hidden="true">✓</span>
+    <div>
+      <p class="industrial-io-kicker">SOLICITUD RECIBIDA</p>
+      <h2>Gracias por contarnos tu proyecto</h2>
+      <p>Tu solicitud se ha enviado correctamente. Nos pondremos en contacto contigo en el correo indicado.</p>
+    </div>
+  </section>
+
+  <nav class="case-study-cta" aria-label="Navegación del proyecto">
+    <a class="case-study-button case-study-button-secondary" href="{{ url_for('index') }}#proyectos">
+      Volver al catálogo de proyectos
+    </a>
+  </nav>
+</article>
+
+<script>
+  const modelViewer = document.querySelector(".case-study-model-viewer");
+  modelViewer.addEventListener("error", () => {
+    modelViewer.querySelector(".case-study-model-fallback").hidden = false;
+  });
+</script>
+<script>
+  const requestToggle = document.querySelector(".industrial-io-request-toggle");
+  const requestPanel = document.querySelector("#priority-display-dossier-request");
+  const dossierForm = document.querySelector(".industrial-io-form");
+  const formStatus = document.querySelector(".industrial-io-form-status");
+  const successPanel = document.querySelector(".industrial-io-success");
+  const submitButton = dossierForm.querySelector(".industrial-io-submit");
+
+  requestToggle.addEventListener("click", () => {
+    const isExpanded = requestToggle.getAttribute("aria-expanded") === "true";
+    requestToggle.setAttribute("aria-expanded", String(!isExpanded));
+    requestPanel.hidden = isExpanded;
+
+    if (!isExpanded) {
+      requestPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+      dossierForm.querySelector("[name='name']").focus({ preventScroll: true });
+    }
+  });
+
+  dossierForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    formStatus.classList.remove("is-error", "is-loading");
+    formStatus.textContent = "Enviando tu solicitud de forma segura...";
+    formStatus.classList.add("is-loading");
+    formStatus.hidden = false;
+    submitButton.disabled = true;
+    submitButton.textContent = "Enviando...";
+
+    try {
+      const formData = Object.fromEntries(new FormData(dossierForm));
+      formData.replyto = dossierForm.elements.email.value;
+
+      const response = await fetch(dossierForm.action, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(
+          result.message ||
+          result.body?.message ||
+          "No se pudo enviar la solicitud. Inténtalo de nuevo."
+        );
+      }
+
+      formStatus.hidden = true;
+      formStatus.classList.remove("is-loading");
+      requestPanel.hidden = true;
+      requestToggle.setAttribute("aria-expanded", "false");
+      successPanel.hidden = false;
+      successPanel.scrollIntoView({ behavior: "smooth", block: "center" });
+    } catch (error) {
+      formStatus.textContent = error.message || "No se pudo enviar la solicitud. Inténtalo de nuevo.";
+      formStatus.classList.remove("is-loading");
+      formStatus.classList.add("is-error");
+      formStatus.hidden = false;
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = "Enviar solicitud";
+    }
+  });
+</script>
+{% endblock %}
